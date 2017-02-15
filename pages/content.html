@@ -1,0 +1,47 @@
+<section class="content-page">
+    <!-- Content Menu Begin -->
+    <div class="content-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="content-menu-header">
+                        <span class="header">{{ content.content.title }}</span>
+                    </div>
+                </div>
+                <div class="col-md-9 hidden-sm hidden-xs">
+                    <div class="row">
+                        {% for item in content.subContents %}
+                        <div class="col-md-15">
+                            <a href="{{ item.slug }}" class="content-menu-link{% if item.slug == content.content.slug %} active {% endif %}">{{ item.title }}</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- Mobil Görünüm için -->
+                <div class="mobil-content-menu-wrap">
+                    <select class="mobil-content-menu hidden-md hidden-lg form-control" onchange="location = this.value;">
+                        {% for item in content.subContents %}
+                        <option {% if item.slug == content.content.slug %} selected {% endif %} value="{{ item.slug }}"><a href="#" class="content-menu-link">{{ item.title }}</a></option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content Menu End -->
+    <div class="content">
+        <div class="container">
+            <div class="content-img">
+                <img src="{% if content.content.img_url is defined %}{{content.content.img_url}}{% endif %}">
+            </div>
+            <div class="content-text">
+                <h2>Lorem ipsum dolor</h2>
+                <h4>Sit Amet Consectetur Adipisicing elit</h4>
+                <p>Aliquid architecto assumenda cum delectus doloribus ducimus eius explicabo fugit harum hic ipsum iste modi, neque optio quibusdam recusandae tempora. Aliquid, quidem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam animi aspernatur aut autem cumque dignissimos dolorem eligendi eveniet fuga maxime quos ratione reiciendis rerum soluta totam ut velit, voluptate.</p>
+
+                <h4>Sit Amet Consectetur Adipisicing elit</h4>
+                <p>Aliquid architecto assumenda cum delectus doloribus ducimus eius explicabo fugit harum hic ipsum iste modi, neque optio quibusdam recusandae tempora. Aliquid, quidem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam animi aspernatur aut autem cumque dignissimos dolorem eligendi eveniet fuga maxime quos ratione reiciendis rerum soluta totam ut velit, voluptate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi at beatae consectetur, culpa eligendi fuga molestias non obcaecati quisquam quod quos sapiente sit! Deleniti expedita fugiat itaque quos similique.</p>
+            </div>
+        </div>
+    </div>
+</section>

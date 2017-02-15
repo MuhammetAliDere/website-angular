@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr" ng-app="siteApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Site Title</title>
+    <base href="/github_angular_site/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
+    <!-- Font: Open Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <!-- Bootstrap Styles -->
+    <link type="text/css" rel="stylesheet" href='node_modules/bootstrap/dist/css/bootstrap.min.css'>
+    <link type="text/css" rel="stylesheet" href='node_modules/bootstrap/dist/css/bootstrap-theme.min.css'>
+    <!-- Font Awesome -->
+    <link type="text/css" rel="stylesheet" href='node_modules/font-awesome/css/font-awesome.min.css'>
+    <!-- Custom Styles -->
+    <link type="text/css" rel="stylesheet" href='assets/css/main.css?v=1.0.0'>
+    <!-- Content Style -->
+    <link type="text/css" rel="stylesheet" href='assets/css/content-page.css'>
+    <!-- Slider -->
+    <link type="text/css" rel="stylesheet" href='assets/package/angular-photo-slider/css/styles.css'>
+
+    <link rel="stylesheet" type="text/css" href="node_modules/fancybox/dist/css/jquery.fancybox.css" media="screen" />
+    <!-- Add Button helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="assets/package/fancybox/source/helpers/jquery.fancybox-buttons.css" />
+</head>
+<body ng-controller="MainController">
+    <div class="alerts-wrap">
+        <script type="text/ng-template" id="alert.html">
+            <div ng-transclude></div>
+        </script>
+        <div class="alert-item" uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)" ng-bind="alert.msg"></div>
+        <!--button ng-click="addAlert('kayrı başarılı', 'success')">add</button-->
+    </div>
+
+    <header>
+        <navbar></navbar>
+
+        <div class="logo-wrap container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <a class="logo-link" href="#">
+                        <img class="logo" src="http://placehold.it/265x79" title="alnus yatırım menkul değerler" alt="alnus yatırım menkul değerler">
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="header-phone pull-right hidden-xs">
+                        <div class="header-phone-icon">
+                            <img class="logo" src="assets/images/icons/phone_icon.png">
+                        </div>
+
+                        <div class="mobil-clear"></div>
+
+                        <div class="header-phone-text">
+                            <span class="line top">ALNUS YATIRIM</span>
+                            <span class="line bottom">+90 212 213 08 00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div ng-view></div>
+
+    <footer class="footer">
+        <div class="sitemap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-6">
+                                <span class="sitemap-item-header">Adipisci Asperiores</span>
+                                <ul class="sitemap-list">
+                                    <li><a href="#">Lorem</a></li>
+                                    <li><a href="#">ipsum</a></li>
+                                    <li><a href="#">dolor sit</a></li>
+                                    <li><a href="#">consectetur</a></li>
+                                    <li><a href="#">adipisicing elit</a></li>
+                                    <li><a href="#">aspernatur atque</a></li>
+                                    <li><a href="#">dolore est</a></li>
+                                    <li><a href="#">explicabo</a></li>
+                                    <li><a href="#">reiciendis</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-6 clear-right-space">
+                                <span class="sitemap-item-header">Inventore Magnam</span>
+                                <ul class="sitemap-list">
+                                    <li><a href="#">minus numquam</a></li>
+                                    <li><a href="#">debitis</a></li>
+                                    <li><a href="#">reprehenderit</a></li>
+                                    <li><a href="#">sit vel</a></li>
+                                    <li><a href="#">sint veniam</a></li>
+                                    <li><a href="#">provident</a>
+                                    <li><a href="#">repellat</a></li>
+                                    <li><a href="#">expedita</a></li>
+                                    <li><a href="#">fugiat</a></li>
+                                    <li><a href="#">lorem ipsum</a></li>
+                                </ul>
+                            </div>
+                            <div class="iletisim-wrap col-md-4 col-sm-12 col-xs-12 clear-right-space">
+                                <span class="sitemap-item-header">İletişim</span>
+                                <div class="sitemap-adres">
+                                    <p class="line">
+                                        <span class="strong">Adres:</span> 4960 Cherry Camp Road
+                                        Chicago, IL 60607
+                                    </p>
+                                    <p class="line"><span class="strong">Tel:</span> +90 111 222 33 44 Pbx</p>
+                                    <p class="line"><span class="strong">Fax:</span> +90 111 222 33 44</p>
+                                    <p class="line"><span class="strong">E-mail:</span> <a class="email-link" href="mailto:info@alnusyatirim.com">info@alnusyatirim.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-md-push-1">
+                        <iframe style="max-width: 458px; width: 100%; height: 196px;" width="458" height="196" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190256.1002294447!2d-87.87258091170985!3d41.83364743319068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C+Illinois%2C+Birle%C5%9Fik+Devletler!5e0!3m2!1str!2str!4v1487167367085" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="foot">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-logo">
+                            <img src="http://placehold.it/300x50">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos inventore quo sed. At aut, blanditiis, corporis distinctio dolorum ducimus explicabo incidunt modi nemo omnis perferendis ratione rem sapiente similique veritatis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda autem, beatae blanditiis corporis laborum quae ratione temporibus. Amet blanditiis consequuntur cum et eveniet id iusto nemo nihil perferendis quaerat, repellendus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolore doloremque eveniet exercitationem facere fugit, nihil omnis, quae quaerat quo quod repudiandae, sed sint suscipit tempora ullam unde vero voluptatum. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p class="copyright">© 2016 - Lorem Ipsum A.Ş.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Jquery -->
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-touch/angular-touch.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-bootstrap-npm/dist/angular-bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/package/angularjs/sticky.js"></script>
+    <script type="text/javascript" src="assets/package/angularjs/tweenMax.min.js"></script>
+
+    <!-- Site App -->
+    <script type="text/javascript" src="app/siteApp.js"></script>
+    <!-- Animation -->
+    <script type="text/javascript" src="app/animations/sliderAnimation.js"></script>
+    <!-- Directives -->
+    <script type="text/javascript" src="app/directives/navbar/navbar.js"></script>
+    <script type="text/javascript" src="app/directives/parite/parite.js"></script>
+    <script type="text/javascript" src="app/directives/photoslider/photoSlider.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="app/controllers/mainController.js"></script>
+    <script type="text/javascript" src="app/controllers/homeController.js"></script>
+    <script type="text/javascript" src="app/controllers/contentController.js"></script>
+    <script type="text/javascript" src="app/controllers/modalController.js"></script>
+</body>
+</html>
+

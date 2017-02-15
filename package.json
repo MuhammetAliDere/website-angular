@@ -1,0 +1,23 @@
+{
+  "name": "website_angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "muhammet ali dere",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.2",
+    "angular-animate": "^1.6.2",
+    "angular-bootstrap-npm": "^0.14.3",
+    "angular-route": "^1.6.2",
+    "angular-sanitize": "^1.6.2",
+    "angular-touch": "^1.6.2",
+    "bootstrap": "^3.3.7",
+    "fancybox": "^3.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.1.1"
+  }
+}

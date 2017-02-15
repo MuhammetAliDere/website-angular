@@ -1,0 +1,52 @@
+<div class="demo-form-wrap">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">ÜCRETSİZ BAŞVURU</h3>
+    </div>
+    <form ng-submit="processForm()" method="post" ng-if="!demoResult">
+        <div class="modal-body" id="modal-body">
+
+            <div class="col-md-6 col-xs-12" style="padding-left: 0px;">
+                <div class="form-group">
+                    <input class="form-control" required type="text" placeholder="ADINIZ*" ng-model="formData.firstname">
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12" style="padding-right: 0px; padding-left: 0px;">
+                <div class="form-group">
+                    <input class="form-control" required type="text" placeholder="SOYADINIZ*" ng-model="formData.lastname">
+                </div>
+            </div>
+            <div class="form-group">
+                <input class="form-control" required type="email" placeholder="E-POSTA ADRESINIZ*" ng-model="formData.email">
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" required type="tel" placeholder="TELEFON NUMARANIZ*" ng-model="formData.phone">
+            </div>
+
+            <div class="form-group">
+                <textarea class="demoform-textarea form-control" name="message" placeholder="MESAJINIZ" ng-model="formData.message"></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div>
+                <button class="btn btn-primary" ng-disabled="result" type="submit">ÜCRETSİZ BAŞVUR</button>
+            </div>
+            <!--button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button-->
+            <div class="clearfix"></div>
+            <div class="form-group">
+
+                <label for="info" class="info-text"><input id="info" class="checkbox" type="checkbox" ng-model="formData.info">Burada yer alan bilgiler ile tarafıma Alnus Yatırım Menkul Değerler A.Ş. tarafından tüm iletişim faaliyetlerine izin verdiğimi kabul ederim.</label>
+            </div>
+        </div>
+    </form>
+    <div class="modal-body result" ng-if="demoResult">
+        <div class="success-wrap" ng-if="demoSuccess">
+            <img src="/bundles/main/assets/images/icons/check_icon.png">
+        </div>
+        <div ng-bind="demoResultContent" class="result-content"></div>
+        <div class="button-wrap">
+            <button ng-click="$ctrl.cancel()">Tamam</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="">
+    <div class="pariteler-buttons pariteler-col">
+        <a class="btn btn-sm btn-base btn-blue" ng-click="addtype('parite')">FOREX</a>
+        <a class="btn btn-sm btn-base btn-lightblue" ng-click="addtype('endeks')">ENDEKSLER</a>
+    </div>
+    <div class="pariteler-text pariteler-col marquee">
+        <div class="pariteler">
+            <div ng-repeat="(name, item) in pariteler" class="pariteler-item">
+                <div ng-if="tab == 'parite'" class="pariteler-item">
+                    {{name}} <span ng-class="item.arrow">{{item.ask}}</span>
+                    <span class="ayrac">|</span>
+                </div>
+
+                <div ng-if="tab == 'endeks'" class="pariteler-item">
+                    {{name}} <span ng-class="item.arrow">{{item.ask}}</span>
+                    <span class="ayrac">|</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
