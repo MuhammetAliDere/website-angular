@@ -1,7 +1,7 @@
 /**
  * Created by muhammet.dere on 21.09.2016.
  */
-alnusApp.controller('homeController', ['$scope', function($scope){
+siteApp.controller('homeController', ['$scope', function($scope){
 
     $scope.slides = [
         {image: '//placehold.it/800x600', description: 'Image 00'},

@@ -1,11 +1,10 @@
 /**
  * Created by muhammet.dere on 21.09.2016.
  */
-var alnusApp = angular.module('siteApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'sticky', 'ngSanitize', 'ui.bootstrap']);
+var siteApp = angular.module('siteApp', ['ngRoute', 'ngAnimate', 'ngTouch', 'sticky', 'ngSanitize', 'ui.bootstrap']);
 
 
-alnusApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
-
+siteApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 
     $routeProvider
 
@@ -13,33 +12,17 @@ alnusApp.config(['$routeProvider', '$locationProvider', function($routeProvider,
         templateUrl: 'pages/home.html',
         controller: 'homeController'
     })
+    .when('/iletisim', {
+        templateUrl: 'pages/contact.html'
+    })
     .when('/{path}', {
         templateUrl: 'pages/content.html',
-        controller: 'homeController'
+        controller: 'contentController'
     })
-
-    //.when('/:contentUrl', {
-    //    templateUrl: 'pages/content.html',
-    //    controller: 'contentController'
-    //})
-    // .when('/alnusla-tanisin', {
-    //     templateUrl: 'pages/content.html'
-    // })
-    // .when('/raporlarimiz', {
-    //     templateUrl: 'pages/content.html'
-    // })
-    // .when('/urun-ve-hizmetlerimiz', {
-    //     templateUrl: 'pages/content.html'
-    // })
-    // .when('/iletisim', {
-    //     templateUrl: 'pages/contact.html'
-    // })
-
     .otherwise({
-       templateUrl: 'pages/content.html',
-       controller: 'contentController'
-    })
-    ;
+        templateUrl: 'pages/home.html',
+        controller: 'homeController'
+    });
 
     $locationProvider.html5Mode(true);
 }]);

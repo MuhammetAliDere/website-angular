@@ -1,7 +1,7 @@
 /**
  * Created by muhammet.dere on 23.09.2016.
  */
-alnusApp.animation('.slide-animation', [function () {
+siteApp.animation('.slide-animation', [function () {
     return {
         beforeAddClass: function (element, className, done) {
             var scope = element.scope();

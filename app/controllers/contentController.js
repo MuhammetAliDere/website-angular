@@ -1,7 +1,7 @@
 /**
  * Created by muhammet.dere on 26.09.2016.
  */
-alnusApp.controller('contentController', ['$scope', '$location', '$routeParams', '$http', function($scope, $location, $routeParams, $http){
+siteApp.controller('contentController', ['$scope', '$location', '$routeParams', '$http', function($scope, $location, $routeParams, $http){
     //console.log("contentController", $routeParams.contentUrl);
 
 

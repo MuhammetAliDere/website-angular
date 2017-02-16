@@ -1,7 +1,7 @@
 /**
  * Created by muhammet.dere on 21.09.2016.
  */
-alnusApp.directive('photoSlider', [function(){
+siteApp.directive('photoSlider', [function(){
 
     return {
         restrict: 'E',
@@ -17,38 +17,38 @@ alnusApp.directive('photoSlider', [function(){
                     content: 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse',
                     description: '',
                     buttonText: 'laboris nisi ut aliquip',
-                    detailButtonLink: 'https://www.alnusforex.com'
+                    detailButtonLink: '#'
                 },
                 {
                     image: 'assets/slider/hisse_desktop.jpg',
                     mobilImage: 'assets/slider/hisse_mobile.jpg',
-                    mainTitle: 'Alnus Yatırım',
-                    contentHeader: 'Pay Senetleri ',
-                    content: 'Alnus Yatırım uzman kadrosu ile Pay Senedi işlemlerinizde artık bir adım öndesiniz. Teknolojik alt yapı ve hızlı işlem platformu ile yatırımı Uzmanı ile yapın!',
+                    mainTitle: 'Commodo Consequat',
+                    contentHeader: 'Lorem Ipsum',
+                    content: 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse',
                     description: '',
-                    buttonText: 'Ücretsiz Yatırım Hesabı Başvurusu',
-                    detailButtonLink: '/pay-piyasasi'
+                    buttonText: 'laboris nisi ut aliquip',
+                    detailButtonLink: '#'
                 },
                 {
                     image: 'assets/slider/petrol_desktop.jpg',
                     mobilImage: 'assets/slider/petrol_mobile.jpg',
-                    mainTitle: 'Alnus Yatırım',
-                    contentHeader: 'CFD İşlemleri',
-                    content: 'Alnus Yatırım ile CFD işlemleri parmağınızın ucunda. İnternet olan her yerden alım satım işlemi yapabilir uzman analiz kadrosundan anlık analizleri alabilirsiniz.',
+                    mainTitle: 'Commodo Consequat',
+                    contentHeader: 'Lorem Ipsum',
+                    content: 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse',
                     description: '',
-                    buttonText: 'Ücretsiz Yatırım Hesabı Başvurusu',
-                    detailButtonLink: '/cfd'
+                    buttonText: 'laboris nisi ut aliquip',
+                    detailButtonLink: '#'
                 },
 
                 {
                     image: 'assets/slider/worldtrading_desktop.jpg',
                     mobilImage: 'assets/slider/worldtrading_mobile.jpg',
-                    mainTitle: 'Alnus Yatırım',
-                    contentHeader: 'Dünya Endeksleri',
-                    content: 'Dünya Endekslerine tek platformdan ulaşmak 5 gün 24 saat işlem yapmak istermisiniz? Alnus Yatırım’ın işlem platformu ile güvenli ve hızlı yatırım yapın!',
+                    mainTitle: 'Commodo Consequat',
+                    contentHeader: 'Lorem Ipsum',
+                    content: 'quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse',
                     description: '',
-                    buttonText: 'Ücretsiz Yatırım Hesabı Başvurusu',
-                    detailButtonLink: '/yurtdisi-pay'
+                    buttonText: 'laboris nisi ut aliquip',
+                    detailButtonLink: '#'
                 }
 
             ];

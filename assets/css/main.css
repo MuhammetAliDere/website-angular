@@ -157,6 +157,7 @@ Menu
 .logo-link {
     display: inline-block;
     padding-left: 20px;
+    padding-top: 3px;
 }
 .logo-link img {
 }

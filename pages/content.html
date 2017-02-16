@@ -1,38 +1,101 @@
 <section class="content-page">
-    <!-- Content Menu Begin -->
+
     <div class="content-menu">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <div class="content-menu-header">
-                        <span class="header">{{ content.content.title }}</span>
+                        <span class="header">Raporlar</span>
                     </div>
                 </div>
                 <div class="col-md-9 hidden-sm hidden-xs">
                     <div class="row">
-                        {% for item in content.subContents %}
                         <div class="col-md-15">
-                            <a href="{{ item.slug }}" class="content-menu-link{% if item.slug == content.content.slug %} active {% endif %}">{{ item.title }}</a>
+                            <a href="#" class="content-menu-link">Hakkımızda</a>
                         </div>
-                        {% endfor %}
+                        <div class="col-md-15">
+                            <a href="#" class="content-menu-link">Tarihçemiz</a>
+                        </div>
+                        <div class="col-md-15">
+                            <a href="#" class="content-menu-link">Yönetim Kurulu</a>
+                        </div>
+                        <div class="col-md-15">
+                            <a href="#" class="content-menu-link">Başkanın Mesajı</a>
+                        </div>
+                        <div class="col-md-15">
+                            <a href="#" class="content-menu-link">Ticaret Sicil Bilgileri</a>
+                        </div>
+                        <div class="col-md-15">
+                            <a href="#" class="content-menu-link">Yetki Belgelerimiz</a>
+                        </div>
+                        <div class="col-md-15">
+                            <a href="#" class="content-menu-link active ">Raporlar</a>
+                        </div>
+                        <div class="col-md-15">
+                            <a href="#" class="content-menu-link">Yasal Bilgiler</a>
+                        </div>
+                        <div class="col-md-15">
+                            <a href="#" class="content-menu-link">Duyurular</a>
+                        </div>
+                        <div class="col-md-15">
+                            <a href="#" class="content-menu-link">İnsan Kaynakları</a>
+                        </div>
                     </div>
                 </div>
-                <!-- Mobil Görünüm için -->
                 <div class="mobil-content-menu-wrap">
                     <select class="mobil-content-menu hidden-md hidden-lg form-control" onchange="location = this.value;">
-                        {% for item in content.subContents %}
-                        <option {% if item.slug == content.content.slug %} selected {% endif %} value="{{ item.slug }}"><a href="#" class="content-menu-link">{{ item.title }}</a></option>
-                        {% endfor %}
+                        <option value="hakkimizda">Hakkımızda</option>
+                        <option value="tarihcemiz">Tarihçemiz</option>
+                        <option value="yonetim-kurulu">Yönetim Kurulu</option>
+                        <option value="baskanin-mesaji">Başkanın Mesajı</option>
+                        <option value="ticaret-sicil-bilgileri">Ticaret Sicil Bilgileri</option>
+                        <option value="yetki-belgelerimiz">Yetki Belgelerimiz</option>
+                        <option selected="" value="faaliyet-raporlari">Raporlar</option>
+                        <option value="yasal-bilgiler">Yasal Bilgiler</option>
+                        <option value="duyurular">Duyurular</option>
+                        <option value="insan-kaynaklari">İnsan Kaynakları</option>
                     </select>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Twig -->
+    <!-- Content Menu Begin -->
+    <!--<div class="content-menu">-->
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-3">-->
+                    <!--<div class="content-menu-header">-->
+                        <!--<span class="header">{{ content.content.title }}</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-md-9 hidden-sm hidden-xs">-->
+                    <!--<div class="row">-->
+                        <!--{% for item in content.subContents %}-->
+                        <!--<div class="col-md-15">-->
+                            <!--<a href="{{ item.slug }}" class="content-menu-link{% if item.slug == content.content.slug %} active {% endif %}">{{ item.title }}</a>-->
+                        <!--</div>-->
+                        <!--{% endfor %}-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; Mobil Görünüm için &ndash;&gt;-->
+                <!--<div class="mobil-content-menu-wrap">-->
+                    <!--<select class="mobil-content-menu hidden-md hidden-lg form-control" onchange="location = this.value;">-->
+                        <!--{% for item in content.subContents %}-->
+                        <!--<option {% if item.slug == content.content.slug %} selected {% endif %} value="{{ item.slug }}"><a href="#" class="content-menu-link">{{ item.title }}</a></option>-->
+                        <!--{% endfor %}-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
     <!-- Content Menu End -->
+
     <div class="content">
         <div class="container">
             <div class="content-img">
-                <img src="{% if content.content.img_url is defined %}{{content.content.img_url}}{% endif %}">
+                <!--<img src="{% if content.content.img_url is defined %}{{content.content.img_url}}{% endif %}">-->
             </div>
             <div class="content-text">
                 <h2>Lorem ipsum dolor</h2>

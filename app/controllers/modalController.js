@@ -1,7 +1,7 @@
 /**
  * Created by muhammet.dere on 29.09.2016.
  */
-alnusApp.controller('ModalDemoCtrl', ['$scope', '$uibModal', function ($scope, $uibModal) {
+siteApp.controller('ModalDemoCtrl', ['$scope', '$uibModal', function ($scope, $uibModal) {
 
     var $ctrl = this;
     $ctrl.items = ['item1', 'item2', 'item3'];
@@ -13,7 +13,7 @@ alnusApp.controller('ModalDemoCtrl', ['$scope', '$uibModal', function ($scope, $
             animation: $ctrl.animationsEnabled,
             ariaLabelledBy: 'modal-title',
             ariaDescribedBy: 'modal-body',
-            templateUrl: '/bundles/main/assets/pages/modalContent.twig?v='+Math.random(),
+            templateUrl: 'assets/pages/modalContent.html?v='+Math.random(),
             controller: 'ModalInstanceCtrl',
             controllerAs: '$ctrl',
             size: size,
@@ -71,7 +71,7 @@ alnusApp.controller('ModalDemoCtrl', ['$scope', '$uibModal', function ($scope, $
 // Please note that $uibModalInstance represents a modal window (instance) dependency.
 // It is not the same as the $uibModal service used above.
 
-alnusApp.controller('ModalInstanceCtrl', ['$uibModalInstance', 'items', '$scope', '$http', function ($uibModalInstance, items, $scope, $http) {
+siteApp.controller('ModalInstanceCtrl', ['$uibModalInstance', 'items', '$scope', '$http', function ($uibModalInstance, items, $scope, $http) {
     $scope.formData = {};
 
 

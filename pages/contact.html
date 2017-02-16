@@ -1,0 +1,106 @@
+<section class="contact">
+    <div class="map">
+        <iframe width="100%" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190256.1002294447!2d-87.87258091170985!3d41.83364743319068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C+Illinois%2C+Birle%C5%9Fik+Devletler!5e0!3m2!1str!2str!4v1487167367085" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <div class="form-adres">
+        <div class="container">
+            <div class="row">
+                <div class="form-adres-col col-md-7">
+                    <h2 class="col-header">BİZE YAZIN</h2>
+                    <p class="col-title">
+                        Yatırımlarınız ile ilgili tüm sorularınızı bize yazın, <br>
+                        sizinle iletişime geçelim.
+                    </p>
+
+                    <span class="contact-underline"></span>
+
+                    <!--{% for flashMessage in app.session.flashbag.get('success') %}-->
+
+                    <!--<div class="alert alert-success">{{ flashMessage }}</div>-->
+
+                    <!--{% endfor %}-->
+                    <!--{% for flashMessage in app.session.flashbag.get('error') %}-->
+
+                    <!--<div class="alert alert-danger">{{ flashMessage }}</div>-->
+
+                    <!--{% endfor %}-->
+
+                    <form method="post" action="{{ path("contact") }}">
+                    <input type="hidden" name="_csrf_token" value="{{ token.value }}" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="firstname" required placeholder="ADINIZ">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="lastname" placeholder="SOYADINIZ">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="email" required placeholder="E-MAIL ADRESİNİZ">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="phone" required placeholder="TELEFON NUMARANIZ">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="topic" placeholder="KONU">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="message" class="message form-control" required placeholder="MESAJINIZI YAZIN."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-base btn-red">GÖNDER</button>
+                    </form>
+                </div>
+                <div class="form-adres-col col-md-4 col-md-push-1">
+                    <h2 class="col-header">ZİYARET EDİN</h2>
+                    <p class="col-title">
+                        Siz de hemen ofisimizde bizi ziyaret edin, yatırımlarınızı<br>
+                        nasıl daha ileriye taşıyabileceğinizi<br>
+                        uzmanlarız size anlatsın.
+                    </p>
+                    <span class="contact-underline"></span>
+
+                    <span class="adres-type">GENEL MÜDÜRLÜK ADRES</span>
+                    <p class="adress-line">
+                        4960 Cherry Camp Road<br>
+                        Chicago, IL 60607
+                    </p>
+
+                    <span class="adres-type">TELEFON</span>
+                    <p class="adress-line">+90 111 222 33 44 Pbx</p>
+
+                    <span class="adres-type">FAX</span>
+                    <p class="adress-line">+90 111 222 33 44</p>
+
+                    <span class="adres-type">EMAIL</span>
+                    <p class="adress-line">info@lorem.com</p>
+
+                    <hr >
+
+                    <div class="social">
+                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+                    </div>
+
+                    <!-- <a class="btn btn-base btn-red" href="#">CANLI DESTEK</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -3,7 +3,7 @@
  */
 
 
-alnusApp.directive('parite', ['$http', function($http){
+siteApp.directive('parite', ['$http', function($http){
 
     return{
         restrict: 'E',

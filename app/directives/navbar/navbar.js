@@ -1,7 +1,7 @@
 /**
  * Created by muhammet.dere on 22.09.2016.
  */
-alnusApp.directive('navbar', ['$window', function($window){
+siteApp.directive('navbar', ['$window', function($window){
 
     return{
         restrict: 'E',
